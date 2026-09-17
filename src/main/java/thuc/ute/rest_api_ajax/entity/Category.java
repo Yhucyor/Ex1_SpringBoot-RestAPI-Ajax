@@ -19,6 +19,7 @@ public class Category implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long categoryId;
+    @Column(length = 255, columnDefinition = "nvarchar(255) not null")
     private String categoryName;
     private String icon;
 

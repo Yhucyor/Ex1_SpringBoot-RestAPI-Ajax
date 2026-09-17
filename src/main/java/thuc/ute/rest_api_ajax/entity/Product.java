@@ -3,7 +3,6 @@ package thuc.ute.rest_api_ajax.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.format.annotation.DateTimeFormat;
 import jakarta.persistence.*;
 import lombok.*;
@@ -34,7 +33,6 @@ public class Product implements Serializable {
     private Date createDate;
     @Column(nullable = false)
     private short status;
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="categoryId")
     private Category category;
